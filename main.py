@@ -25,3 +25,15 @@ print(f"Orange = {amount_orange} x { price_orange} = {price_orange_total}")
 print(f"Apel = {amount_grape} x { price_grape} = {price_grape_total}")
 
 print("Total Belanja = ", price_apple_total+price_orange_total+price_grape_total)
+
+uang_pelanggan = int(input("Masukkan jumlah uang = "))
+total_belanja = price_apple_total+price_orange_total+price_grape_total
+if uang_pelanggan == total_belanja:
+    print("Terima Kasih")
+elif uang_pelanggan < total_belanja:
+    kekurangan = total_belanja - uang_pelanggan
+    print(f"Transaksi anda dibatalkan. Anda kurang {kekurangan}")
+else:
+    kelebihan = uang_pelanggan - total_belanja
+    print("Terima Kasih")
+    print(f"Uang Kembali Anda = {kelebihan}")
